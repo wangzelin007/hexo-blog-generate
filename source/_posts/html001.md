@@ -369,4 +369,15 @@ categories: Html
 特殊情况下的可替换元素：<audio> 、<canvas>
 ``` 
 
+## 手机自适应
+emmet: `meta:vp`
+`<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">`  
+** 语句解释 **  
+页面宽度由设备宽度决定  
+不允许缩放  
+初始缩放比例1:1  
+最大缩放比例1:1  
+最小缩放比例1:1  
+
+
 

@@ -7,6 +7,8 @@ tags: [bash]
 categories: Linux
 ---
 
-## du
-从小到大显示所有的文件(包含隐藏文件)
-`du -ahd1|sort -h`
+* du  
+从小到大显示所有的文件(包含隐藏文件)  
+`du -ahd1|sort -h`  
+* egrep  
+egrep "^[^#]" /etc/neutron.conf 不太理解

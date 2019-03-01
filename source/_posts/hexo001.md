@@ -10,7 +10,9 @@ mathjax: true
 hexo new $name
 hexo generate
 hexo deploy
-
+hexo generate && deploy
+hexo s -g
+hexo clean
 ```
 
 ```

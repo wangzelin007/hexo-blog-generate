@@ -10,5 +10,5 @@ categories:
 python setup.py bdist_rpm
 
 ## wheel包
-pip install wheel
+pip install wheel  
 python setup.py bdist_wheel
