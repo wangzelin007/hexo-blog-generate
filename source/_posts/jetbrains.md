@@ -7,7 +7,7 @@ tags: [jetbrains]
 categories: jetbrains
 ---
 ## surround with
-+ mac:`command + shift + T`
++ mac:`option + command + T`
 + win:`ctrl + alt + T`
 
 ##格式化代码
