@@ -100,3 +100,30 @@ mysqlbinlog -D mysqld-bin.000001
 mysqlbinlog -R -h 192.168.0.1 -p root mysqld-bin.000001
 ```
 
+**批量删除表**
+```
+Select CONCAT( 'drop table ', task_id, ';' )FROM task Where start_time = '1999-01-01 01' and end_time < '2019-01-01 01';
+```
+
+**event_scheduler**
+```
+SET GLOBAL event_scheduler=1;
+USE keystone;
+
+delimiter $$
+CREATE EVENT IF NOT EXISTS token_expire_remove ON SCHEDULE EVERY 1 DAY STARTS TIMESTAMP '2019-03-20 02:00:00'
+DO
+BEGIN
+START TRANSACTION;
+SET @timenow=now();
+DELETE FROM token WHERE expires < @timenow;
+COMMIT;
+END $$
+delimiter;
+
+查看:
+show processlist;
+
+持久化:
+event_scheduler=ON
+```

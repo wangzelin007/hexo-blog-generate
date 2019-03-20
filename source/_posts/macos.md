@@ -57,3 +57,7 @@ command + u 透明背景
 * Balsamiq Mockups3 原型图绘制软件  
 * SketchBook Pro 画图软件
 * KeyCastr 显示按键
+* gifox 截图工具
+* Alfred 搜索工具
+* Typora markdown工具
+* Dash 文档阅读工具

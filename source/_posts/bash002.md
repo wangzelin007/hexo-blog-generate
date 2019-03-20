@@ -27,3 +27,18 @@ egrep "^[^#]" /etc/neutron.conf 不太理解
 ```
 
 * ln -s 源文件 链接文件
+
+* 统计
+  + ls -l|grep "^-"|wc -l
+  + ls -l|grep "^d"|wc -l
+  + -R 递归
+
+* tar
+  + tar -czvf target.tar.gz dir
+  + tar -xzf source.tar.gz -C dir
+  
+* grep
+  + grep -C 3 Failed (context around 3 lines)
+  + grep -E '2019-03-18 18:4[0-9]|2019-03-18 18:5[0-9]' 正则匹配某个时间段的日志
+  + grep -i 不区分大小写
+  
