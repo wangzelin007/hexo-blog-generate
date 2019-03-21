@@ -110,7 +110,7 @@ Select CONCAT( 'drop table ', task_id, ';' )FROM task Where start_time = '1999-0
 SET GLOBAL event_scheduler=1;
 USE keystone;
 
-delimiter $$
+DELIMITER $$
 CREATE EVENT IF NOT EXISTS token_expire_remove ON SCHEDULE EVERY 1 DAY STARTS TIMESTAMP '2019-03-20 02:00:00'
 DO
 BEGIN
@@ -119,11 +119,28 @@ SET @timenow=now();
 DELETE FROM token WHERE expires < @timenow;
 COMMIT;
 END $$
-delimiter;
+DELIMITER ;
+-------------------------------
+SET GLOBAL event_scheduler=1;
+USE bonree;
 
+DELIMITER $$
+CREATE EVENT IF NOT EXISTS table_expire_remove ON SCHEDULE EVERY 1 DAY STARTS TIMESTAMP '2019-03-20 02:00:00'
+DO
+BEGIN
+START TRANSACTION;
+SET @timenow=now();
+SET @enddate=date_add(@timenow,interval -1 quarter);
+SET @exeSql="SELECT CONCAT('DROP TABLE ', task_id, ';')FROM task WHERE start_time='1999-01-01 01' AND end_time < @enddate;";
+PREPARE stmt FROM @exeSql;
+EXECUTE stmt;
+DELETE FROM task WHERE start_time='1999-01-01 01' AND end_time < @enddate;
+COMMIT;
+END $$
+DELIMITER ;
+-------------------------------
 查看:
 show processlist;
-
 持久化:
 event_scheduler=ON
 ```
