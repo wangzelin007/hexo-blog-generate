@@ -6,7 +6,10 @@ mathjax: true
 date: 2019-03-14 09:03:35
 categories: javascript
 ---
-## 7种数据类型  
+## 7种数据类型 
+JavaScript 是一种**弱类型**或者说**动态**语言。  
+这意味着你不用提前声明变量的类型，在程序运行过程中，类型会被自动确定。  
+这也意味着你可以使用同一个变量保存不同类型的数据。    
 number/string/boolean/symbol/null/undefined/object
 
 ### number  
@@ -69,6 +72,10 @@ race.protoss !== race.zerg // true
 |object|.|toString 或者+ '' '[obj Obj]'|!!||||\|
 
 老司机使用 + '' 代替 toString 也可以用 String()  
+
+String  
+String(null) // "null"
+String(undefined) // "undefined"
 
 ### 七个falsy值：  
 flase 0 NaN '' "" null undefined  
