@@ -9,7 +9,7 @@ categories: db
 ## percona-xtrabackup 
 **不停机备份工具**  
 `yum install -y percona-xtrabackup` 
- 
+
 连接mysql服务器  
 `xtrabackup --user=DVADER --password=14MY0URF4TH3R --backup --target-dir=/data/backups/`  
 
@@ -63,7 +63,7 @@ GRANT ALL PRIVILEGES ON *.* TO 'new_root'@'%' IDENTIFIED BY '***' WITH GRANT OPT
 ```
 
 **--create-replicate-table** 只有第一次需要 
- 
+
 检查数据库的一致性  
 `pt-table-checksum --nocheck-replication-filters --no-check-binlog-format --databases=neutron,keystone h=192.168.1.102,u=root,p=root,P=3306`  
 
@@ -144,3 +144,8 @@ show processlist;
 持久化:
 event_scheduler=ON
 ```
+
+**压缩binlog**
+`tar -zcvf mysql-bin.000001.tar.gz /var/lib/mysql/mysql-bin.000001;`
+`find -name 'mysql-bin.0000*' ! -name '*.gz' -exec tar -zcvf {}.tar.gz {} \;`
+`find -name 'mysql-bin.0000*' ! -name '*.gz' -exec echo {} \;`

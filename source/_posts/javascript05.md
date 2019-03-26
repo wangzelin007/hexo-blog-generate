@@ -32,6 +32,15 @@ mdn window 详细了解
 + document.getElementById  
 + history (浏览器) BOM  
 
+DOM
++ 获取元素父节点 parentNode，parentElement
++ 检测元素是标签还是文字 nodeType === 1,nodeType === 3
++ 子标签 children
++ 子节点(包括标签和文字) childNodes
++  获取下一个标签 循环访问 nextSibling 直到 nodeType === 1
++ 获取所有兄弟标签 声明空数组 siblings，遍历 div.parentNode.children，将 div 以外的元素 push 到数组里
++ DOM博客 http://luopq.com/2015/11/30/javascript-dom/
+
 ```
 var n = 1
 n.xxx = 2
