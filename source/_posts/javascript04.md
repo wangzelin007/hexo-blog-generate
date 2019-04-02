@@ -117,6 +117,7 @@ a.x = a = {n:2};
 alert(a.x); //undefined
 alert(b.x); //[object Object]
 ```
+![内存图](内存图.png "内存图")
 
 ## 垃圾回收  
 如果一个对象没有被引用，将被回收。 

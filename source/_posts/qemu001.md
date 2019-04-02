@@ -18,4 +18,12 @@ categories: qemu
 
 #### 方法二
 
-- 直接压缩转换`qemu-img convert -c -O qcow2 source.qcow2 shrunk.qcow2`
+- 直接压缩转换`qemu-img 
+- convert -c -O qcow2 source.qcow2 shrunk.qcow2`
+
+### qcow2 镜像增加网卡
+- virsh domiflist snale
+- virsh attach-interface snale --type bridge --source br0  --config
+- virsh dumpxml snale >/etc/libvirt/qemu/snale.xml
+- virsh define /etc/libvirt/qemu/snale.xml
+- virsh detach-interface snale  --type bridge --mac  52:54:00:14:86:cf  // 删除网卡
