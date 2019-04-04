@@ -38,4 +38,6 @@ ip route add 10.25.0.0/16 via 10.25.60.161 dev eth0
 * 没有自动分配ip
 需要在/etc/sysconfig/network-scripts 里面增加 ifcfg-eth1 并且使用dhcp
 
-*
+* arp
+`arp -n|grep 30.30.3.66`
+
