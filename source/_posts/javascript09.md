@@ -113,7 +113,7 @@ window.$ = jQuery;
 var $node2 = $('ul > li')
 $node2.addClass(['blue'])
 ```
-[jQuery中文文档](https://www.jquery123.com "jQuery中文文档")
+> [jQuery中文文档](https://www.jquery123.com "jQuery中文文档")
 
 > window.$ = jQuery (alias)
 >
@@ -146,3 +146,8 @@ div 转 $div: $(div)
 div 的属性和方法有 childNodes firstChid nodeType 等  
 $div 的 属性和方法有 addClass removeClass toggleClass 等
 ```
++ 不要覆盖全局变量。
++ 使用局部变量，申明一个匿名函数，立刻调用  。
++ 解决立即执行报错 `() - + ! ~` 
++ ES6 let 可以表示局部变量，{} 是包不住 var 的。
++ 不要使用 $.show() $.hide() js 只控制行为，不控制样式，即只 add remove class

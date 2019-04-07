@@ -6,7 +6,28 @@ mathjax: true
 date: 2019-04-04 20:12:55
 categories: javascript
 ---
-DOM API
+>DOM Level0
++ onclick
++ onerror
++ onload
++ onmousexxx
++ 唯一，互相覆盖
+
+![面试题](1.png)
+> DOM Level2
++ 队列，先进先出
+```
+x. addEventListener('click', function(){})
+x. removeEventListener('click', function(){})
+```
++ one 
+![one](2.png)
++ 捕获冒泡阶段 => 从上到下，从下到上
+  + 自身同时存在捕获冒泡，使用队列模式
+  + 非自身，按照捕获冒泡的顺序
+![捕获冒泡](3.png)
+
+> DOM API
 Document Object Model  
 >有点类似 ORM 一个是将数据库映射为对象，一个是将 documnet 映射为对象 , 主要功能是将页面中的节点通过对应的构造函数转换成对象
 

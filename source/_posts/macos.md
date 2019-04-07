@@ -61,3 +61,5 @@ command + u 透明背景
 * Alfred 搜索工具
 * Typora markdown工具
 * Dash 文档阅读工具
+* Moon 双屏控制工具
+* CheatSheet 快捷键提示工具
