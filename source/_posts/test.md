@@ -6,14 +6,13 @@ categories:
 toc: true
 mathjax: true
 ---
-# test
 ```html
 inline-block不用关注
 html标签没有块级元素和内联元素的区别的，css才有
 html不应该管样式，只管内容
 html定义结构和内容
 css管样式
-js管什么？
+js管动作
 alt 可选内容alternative
 a 标签全称 anchor 连接 锚
 banner 底层大图
@@ -42,7 +41,5 @@ inherit 继承
 所有非空标签都有伪类
 比如 ::before ::after
 有点像python里面的with或者tearup，teardown。不过用法不太一样？
-剪切板管理器
-yd 插件
 css shadow generator
 ```

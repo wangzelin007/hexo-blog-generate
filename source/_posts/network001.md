@@ -27,17 +27,33 @@ ip route add 10.25.0.0/16 via 10.25.60.161 dev eth0
 ```
 
 * ethtool   
-`ethtool ens5f1`
+  `ethtool ens5f1`
 
 * lldptool  
-`lldptool -t -n -i ens5f1`
+  `lldptool -t -n -i ens5f1`
 
 * bond
-`cat /proc/net/bonding/bond0`
+  `cat /proc/net/bonding/bond0`
 
 * 没有自动分配ip
-需要在/etc/sysconfig/network-scripts 里面增加 ifcfg-eth1 并且使用dhcp
+  需要在/etc/sysconfig/network-scripts 里面增加 ifcfg-eth1 并且使用dhcp
 
 * arp
-`arp -n|grep 30.30.3.66`
+  `arp -n|grep 30.30.3.66`
 
+* vlan
+  `cat /proc/net/vlan/config`
+
+* cpu
+
+  `cat /proc/cpuinfo | grep "cores"|uniq`
+
+* 磁盘
+```
+fdisk -l|grep -i disk
+vgs
+cat /proc/partitions
+partprobe -s
+pvcreate /dev/sdb
+vgextend VolGroup00 /dev/sdb
+```

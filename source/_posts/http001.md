@@ -26,6 +26,20 @@ HTTP即**HyperText Transfer Protocol**，**超文本传输协议**，是应用�
 
 ## HTTP请求
 
+### 请求四部分
++ 请求行
+`GET /index.html HTTP/1.1`
++ 请求头
+```
+Cache-Control:max-age=0
+Cookie:gsScrollPos=; _ga=GA1.2.329038035.1465891024; _gat=1
+If-Modified-Since:Sun, 01 May 2016 11:19:03 GMT
+User-Agent:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36
+```
++ 空行
++ 消息体
+
+
 ### 请求方法8种
 + GET
   读取数据
@@ -116,7 +130,22 @@ HTTP即**HyperText Transfer Protocol**，**超文本传输协议**，是应用�
 
 ## HTTP响应
 
-### HTTP响应状态码
+### 响应四部分
++ 状态行
+`HTTP/1.1 200 OK`
++ 响应头
+```
+Connection:keep-alive
+Content-Encoding:gzip
+Content-Type:text/html; charset=utf-8
+Date:Fri, 24 Jun 2016 06:23:31 GMT
+Server:nginx/1.9.12
+Transfer-Encoding:chunked
+```
++ 空行
++ 消息体
+
+### 响应状态码
 [<font color=#0099ff>详细说明</font>](https://zh.wikipedia.org/wiki/HTTP%E7%8A%B6%E6%80%81%E7%A0%81 "HTTP Status-code")
 
 **常用status_code:**    
@@ -176,7 +205,7 @@ Command Line URL Viewer，是一个Linux命令行工具。
 ### 用法简介
 + 下载URL内容到文件[output]：  
   curl `http://www.baidu.com` -o filename
-    
+  
 + 将url输出保存在对应的文件名下[remote-name]：  
   curl -O `http://www.baidu.com/filename`
 

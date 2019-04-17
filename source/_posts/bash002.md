@@ -47,3 +47,5 @@ egrep "^[^#]" /etc/neutron.conf 不太理解
   + watch -n 60 command
   + watch -d ls -l 监控目录变化
 
+* 获取用户输入，定义变量
+  + read -p "Input the Instance Name: " InstName
