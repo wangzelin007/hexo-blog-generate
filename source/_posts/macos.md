@@ -45,6 +45,8 @@ webstorm
 
 ## 系统快捷键
 command + 空格 聚焦搜索  
+command + ctrl + space 特殊字符
+command + ↑↓ 进出目录
 font mac 字体查看  
 ## iTerm2
 command + D 垂直分屏  
