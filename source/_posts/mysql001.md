@@ -105,7 +105,7 @@ mysqlbinlog -R -h 192.168.0.1 -p root mysqld-bin.000001
 Select CONCAT( 'drop table ', task_id, ';' )FROM task Where start_time = '1999-01-01 01' and end_time < '2019-01-01 01';
 ```
 
-**event_scheduler**
+## event_scheduler
 ```
 SET GLOBAL event_scheduler=1;
 USE keystone;
@@ -149,3 +149,11 @@ event_scheduler=ON
 `tar -zcvf mysql-bin.000001.tar.gz /var/lib/mysql/mysql-bin.000001;`
 `find -name 'mysql-bin.0000*' ! -name '*.gz' -exec tar -zcvf {}.tar.gz {} \;`
 `find -name 'mysql-bin.0000*' ! -name '*.gz' -exec echo {} \;`
+
+## mysql 导入导出
+导出表结构
+mysqldump -uroot -proot -d neutron > neutron.sql
+导出单张表
+mysqldump -uroot -proot neutron pa_igws > nsp.sql
+导入表结构
+mysql -uroot -proot < /tmp/neutron.sql

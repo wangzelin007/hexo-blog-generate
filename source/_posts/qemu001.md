@@ -27,3 +27,23 @@ categories: qemu
 - virsh dumpxml snale >/etc/libvirt/qemu/snale.xml
 - virsh define /etc/libvirt/qemu/snale.xml
 - virsh detach-interface snale  --type bridge --mac  52:54:00:14:86:cf  // 删除网卡
+
+### 安装kvm
+- yum -y install qemu-kvm libvirt virt-install bridge-utils
+- systemctl start libvirtd && systemctl enable libvirtd
+
+### error : Activation of org.freedesktop.machine1 timed out
+service systemd-machined restart
+service libvirtd restart
+systemd-machined.service start operation timed out.
+
+### virsh console 不能用
+```
+# add after </interface>
+<serial type='pty'>
+  <target port='0'/>
+</serial>
+<console type='pty'>
+  <target type='serial' port='0'/>
+</console>
+```

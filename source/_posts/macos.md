@@ -14,27 +14,28 @@ categories:
 > autojump  
 > zsh-syntax-highlighting  
 > dotenv
+* 虚拟环境: autoenv + pipenv + virtualwrapper
 * vim 
 * yd 
-有道词典翻译工具
+  有道词典翻译工具
 * xScope 
-设计师工具
+  设计师工具
 * axure 
-产品原型设计工具
+  产品原型设计工具
 * window tidy 
-窗口分屏
+  窗口分屏
 * colorsnapper2 
-取色工具
+  取色工具
 * IDE  
-pycharm  
-webstorm  
-**IDE 插件**
+  pycharm  
+  webstorm  
+  **IDE 插件**
 * translation
 * ideavim  
-** IDE 快捷方式 **
+  ** IDE 快捷方式 **
 * 替换 command + r
 * 正则
-`([a-z]) -> '$1',`
+  `([a-z]) -> '$1',`
 * brew
 * npm
 * postman
@@ -65,3 +66,6 @@ command + u 透明背景
 * Dash 文档阅读工具
 * Moon 双屏控制工具
 * CheatSheet 快捷键提示工具
+* IINA 播放器
+* cleanmymac 电脑清理
+* iPic 图床软件

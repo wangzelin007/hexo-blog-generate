@@ -1,5 +1,5 @@
 ---
-title: bash002
+gtitle: bash002
 toc: true
 mathjax: true
 date: 2019-02-01 17:08:37
@@ -49,3 +49,6 @@ egrep "^[^#]" /etc/neutron.conf 不太理解
 
 * 获取用户输入，定义变量
   + read -p "Input the Instance Name: " InstName
+
+* pidof
+  + pidof haproxy

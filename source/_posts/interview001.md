@@ -14,7 +14,7 @@ categories: interview
 >4.页面中引入了另一个外部 CSS 文件，路径为 /mobile.css，该文件仅在设备宽度小于 500 像素时生效
 >5.页面中引入了一个外部 JS 文件，路径为 /main.js
 >6.页面中引入了一个外部 JS 文件，路径为 /gbk.js，文件编码为 GBK
->7.页面中有一个 SVG 标签，SVG 里面有一个直径为 100 像素的圆圈，颜色随意
+>7.页面中有一个 SVG 标签，SVG 里面有一个直径为 100 像素的圆圈，颜色随意
 >8.注意题目中的路径
 
 ```
@@ -155,16 +155,63 @@ test1()
 ```
 
 > 说出常见的 HTTP 状态码和含义
+>
+> ```
+> 200 OK 请求已成功，POST请求会包含操作结果的实体。
+> 201 Created 资源已创建
+> 202 Accepted 服务器已经接受请求，但还没有处理。
+> 204 No Content服务器成功处理了请求，没有返回任何内容。
+> 301 Moved Permanently 请求的资源已经永久移动到新位置。
+> 302 Found 要求客户端执行临时重定向。
+> 303 See Other 请求的响应可以在另外的URL找到。
+> 304 Not Modified 不需要重新传输资源。
+> 400 Bad Request 客户端错误，服务器不能处理请求。
+> 401 Unauthorized 未认证。
+> 403 Forbidden 服务器理解了请求，但拒绝执行。
+> 404 Not Found 服务器未发现该资源。
+> 405 Method Not Allowed
+> 409 Conflict 请求存在冲突，如多个同步更新的冲突。
+> 500 Internal Server Error 通用错误消息，服务器错误。
+> 502 Bad Gateway 网关服务器执行请求时，从上游服务器接收到无效的响应。
+> 503 Service Unavailable 临时的服务器维护，无法处理请求。
+> 504 Gateway Timeout 网关服务器执行请求时，从上游服务器接收请求超时。
+> ```
+>
+> 
 
 > 请写出一个 HTTP post 请求的内容，包括四部分。
 > 第四部分的内容是 username=ff&password=123
 > 第二部分必须含有 Content-Type 字段
 > 请求的路径为 /path
+>
+> ```
+> 1 POST /path HTTP/1.1
+> 2 Host: passport.baidu.com 
+> 2 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36
+> 2 Accept: application/json
+> 2 Content-Length: 24
+> 2 Content-Type: application/x-www-form-urlencoded
+> 3
+> 4 username=ff&password=123
+> ```
+>
+> 
 
 > 请说出至少三种排序的思路，这三种排序的时间复杂度分别为
 O(n*n)
 O(n log2 n)
-O(n + max
+O(n + max)
+O(n*n):
+插入排序：对于未排序的数据，在已排序序列中从后向前扫描，找到相应位置并插入
+冒泡排序：重复的走访序列，依次比较相邻两个元素，知道没有相邻的元素需要排序
+选择排序：从未排序序列中找min或者max，放到排序序列，再从剩余未排序序列中找min或max，放到排序序列，重复知道所有元素均已排序
+O(n log2 n):
+快速排序：冒泡排序的改进，每次选基准值，将数据分为比基准值要小的部分和比基准值要大的部分，递归进行，直到整个序列有序。
+堆排序：
+归并排序：
+O(n*n):
+基数排序：
+
 
 > 一个页面从输入 URL 到页面加载显示完成，这个过程中都发生了什么？
 
