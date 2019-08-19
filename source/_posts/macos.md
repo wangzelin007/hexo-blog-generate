@@ -69,3 +69,4 @@ command + u 透明背景
 * IINA 播放器
 * cleanmymac 电脑清理
 * iPic 图床软件
+* setapp 软件订阅服务

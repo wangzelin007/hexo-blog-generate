@@ -157,3 +157,18 @@ mysqldump -uroot -proot -d neutron > neutron.sql
 mysqldump -uroot -proot neutron pa_igws > nsp.sql
 导入表结构
 mysql -uroot -proot < /tmp/neutron.sql
+
+## mysql 慢查询清理
+show tables like '%slow%';
+CREATE TABLE slow_log_bak LIKE slow_log;
+RENAME TABLE slow_log to slow_log_old,slow_log_bak to slow_log;
+drop table slow_log_old;
+
+临时
+set global log_queries_not_using_indexes=0;
+show global variables like 'log%';
+永久
+slow_query_log=1
+long_query_time=3
+slow_query_log_file=/var/lib/mysql/slow_query.log
+log-queries-not-using-indexes=0 默认就是不开启的
