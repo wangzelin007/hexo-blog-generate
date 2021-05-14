@@ -209,7 +209,7 @@ Command Line URL Viewer，是一个Linux命令行工具。
 + 将url输出保存在对应的文件名下[remote-name]：  
   curl -O `http://www.baidu.com/filename`
 
-+ 跟随重定向[Location]，自动续传[Continue]，保存到对应的文件名下：  
++ 跟随重定向[Location]，自动续传[Continue]，保存到对应的文件名下： 
   curl -O -L -C `http://www.baidu.com/filename`
 
 + 模拟post请求[data]:  

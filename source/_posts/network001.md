@@ -25,6 +25,9 @@ sudo route add -net default gw 10.25.60.161 netmask 0.0.0.0 dev eth0 metric 1
 sudo route del -net default gw 10.25.60.161 netmask 0.0.0.0 dev eth0 metric 1
 
 ip route add 10.25.0.0/16 via 10.25.60.161 dev eth0
+ip route
+ip route change 192.168.0.0/24 dev eth1 proto kernel scope link src 192.168.0.4
+ip addr del 192.168.0.6/24 dev eth1
 ```
 
 * network
