@@ -73,7 +73,8 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: hexo-theme-next
+# theme: hexo-theme-next
+theme: next-reloaded
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -82,7 +83,7 @@ deploy:
   repo: git@github.com:python-ansible/hexo-blog.git
 
 
-since: 2018
+since: 2021
 
 creative_commons: by-nc-nd
 

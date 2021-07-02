@@ -24,7 +24,7 @@ docker 用Go语言实现，基于Linux内核的cgroup，namespace等技术，对
 容器是镜像运行时的实体，类似程序设计中的类和实例。容器实际是一个进程，但是拥有自己的root文件系统、网络配置、进程空间、用户ID空间。容器应该无状态化，容器存储层的生存周期和容器一样。所有写入操作，都应该使用数据卷或者绑定宿主目录。
 仓库 Repository
 一个仓库包含同一个软件不同版本的镜像。
-
+```
 docker pull repo:tag
 docker run -it --rm ubuntu:18.04 bash
 docker image ls (-a)
@@ -46,28 +46,28 @@ docker restart id
 使用dockerfile
 mkdir docker_nginx1
 touch Dockerfile
-```
 FROM nginx
 RUN echo '<h1>Hello, Docker!</h1>' > /usr/share/nginx/html/index.html
 ```
 每次run 都是一层，所以要合理节省层数，现在最多支持127层。
 
 在dockerfile 目录执行构建：
-docker build -t nginx:v2 .
+`docker build -t nginx:v2 .`
 最后一个参数是上下文路径，COPY命令中也指的是上下文目录中的package.json
-COPY ./package.json /app/
+`COPY ./package.json /app/`
 
 使用.dockerignore 排除不需要作为上下文传递给Docker引擎的内容。
 
 常见的
 
 构建方法：
+```
 docker build -t nginx:v2 .
 docker build https://github.com/example.git
 docker build http://server/context.tar.gz
 docker build - < Dockerfile
 docker build - < context.tar.gz
-
+```
 + Dockerfile 指令详解
 > COPY 文件复制
 + COPY [--chown=<user>:<group>] <源路径> <目标路径>

@@ -7,12 +7,12 @@ toc: true
 mathjax: true
 ---
 ```
-hexo new $name
-hexo generate
-hexo deploy
-hexo generate && deploy
-hexo s -g
-hexo clean
+hexo new $name #新建文章
+hexo generate #生成
+hexo deploy 
+hexo generate && deploy #部署
+hexo s -g #启动服务预览
+hexo clean #清除缓存
 ```
 
 ```
