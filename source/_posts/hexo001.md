@@ -16,14 +16,16 @@ hexo clean #清除缓存
 ```
 
 ```
-hexo new page categories
+hexo new page categories 新建目录
 type: "categories"
 categories: hexo
 
-hexo new page tags
+hexo new page tags 新建tags
 type: "tags"
 tags: [hexo]
 
+删除文件
+hexo clean ~/hexo-blog/myBlog/source/categories/index-1.md
 ```
 
 ```
